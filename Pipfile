@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+matplotlib = "*"
+scipy = "*"
+cartopy = "~=0.18.0"
+cdsapi = "*"
+xarray = "*"
+ipython = "*"
+notebook = "*"
+netcdf4 = "*"
+dask = "*"
+bottleneck = "*"
+pandas = "*"
+seaborn = "*"
+rasterio = "*"
+affine = "*"
+geopandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
