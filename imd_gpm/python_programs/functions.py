@@ -133,10 +133,15 @@ def rmse_calc(da_err, season):
 # Function to convert the IMD daily data to one month data
 # we do the same with GPM for consistency
 
-def daily_to_monthly(da):
+def daily_to_monthly(da, year):
 
     temp = da.groupby('time.month').mean(dim='time')
-    times = pd.date_range(start = "2009-01-15", end = "2010-01-15",freq='M')
+    if year == '2009':
+        times = pd.date_range(start = "2009-01-15", end = "2010-01-15",freq='M')
+    elif year == '2019':
+        times = pd.date_range(start = "2019-01-15", end = "2020-01-15",freq='M')
+    else:
+        print("Enter either 2009 or 2019 as a year")
 
     output = xr.DataArray(
         temp,

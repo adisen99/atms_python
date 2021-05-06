@@ -337,11 +337,11 @@ plt.savefig('./images/rmse2019.png')
 
 # get the time series dataarrays using the function. Here "ts" is timeseries
 
-gpm2009_ts = daily_to_monthly(ds1_ind.precipitation)
-imd2009_ts = daily_to_monthly(ds3_ind.RAINFALL)
+gpm2009_ts = daily_to_monthly(ds1_ind.precipitation, '2009')
+imd2009_ts = daily_to_monthly(ds3_ind.RAINFALL, '2009')
 
-gpm2019_ts = daily_to_monthly(ds2_ind.precipitation)
-imd2019_ts = daily_to_monthly(ds4_ind.RAINFALL)
+gpm2019_ts = daily_to_monthly(ds2_ind.precipitation, '2019')
+imd2019_ts = daily_to_monthly(ds4_ind.RAINFALL, '2019')
 
 # Time series 2009
 
